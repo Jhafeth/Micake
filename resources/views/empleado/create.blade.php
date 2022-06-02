@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('titulo')
-    Crea tu cuenta
+    Crear Empleado
 @endsection
 
 @section('contenido')
@@ -12,7 +12,7 @@
 
         <div class="md:w-4/12 p-6 bg-white rounded-lg shadow-xl">
             
-            <form action="{{ route('cliente.create') }}" method="POST">
+            <form action="{{ route('empleado.create') }}" method="POST">
                 @csrf
                 <div class="mb-5">
                     <label for="name" class="mb-2 block uppercase text-gray-500 font-bold">

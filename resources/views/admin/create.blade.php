@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('titulo')
-    Registrar
+    Crear Administrador
 @endsection
 
 @section('contenido')

@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Persona;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class EmpleadoController extends Controller
 {
@@ -14,6 +17,7 @@ class EmpleadoController extends Controller
     public function index()
     {
         //
+        return view('empleado.index');
     }
 
     /**
@@ -24,6 +28,7 @@ class EmpleadoController extends Controller
     public function create()
     {
         //
+        return view('empleado.create');
     }
 
     /**
@@ -34,7 +39,36 @@ class EmpleadoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate(
+            $request,
+            [
+                'name' => 'required|max:50',
+                'email' => 'required|unique:users|email',
+                'password' => 'required|confirmed|min:4',
+                'ci' => 'required|unique:personas'
+            ]
+        );
+
+        $user = User::create(
+            [
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+                'type' => 2,
+                'active' => true
+            ]
+        );
+
+        $persona = Persona::create(
+            [
+                'ci' => $request->ci,
+                'direccion' => $request->direccion,
+                'telefono' => $request->telefono,
+                'user_id' => $user->id
+            ]
+        );
+  
+        return redirect()->route('admin.index');
     }
 
     /**

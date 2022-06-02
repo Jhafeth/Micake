@@ -21,7 +21,7 @@
                         <a class="font-bold text-gray-600 text-sm">
                             Administrador:  
                         </a>
-                        <a class="font-bold uppercase text-gray-600 text-sm" href="">
+                        <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('usuario.index') }}">
                             Gestionar Usuarios
                         </a>
                         <a class="font-bold uppercase text-gray-600 text-sm" href="">
