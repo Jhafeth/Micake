@@ -30,7 +30,7 @@
 
             <form action="{{ route('empleado.create') }}" method="get">
                 <input type="submit" value="Crear cuenta Empleado"
-                    class="bg-orange-500 hover:bg-green-700 transition-colors 
+                    class="bg-orange-500 hover:bg-orange-700 transition-colors 
                     cursor-pointer uppercase font-bold w-full p-3 text-white rounded-lg" />
             </form>
         </div>
