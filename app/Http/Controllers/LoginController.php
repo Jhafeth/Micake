@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Spatie\Permission\Traits\HasRoles;
 
 class LoginController extends Controller
 {
@@ -22,11 +23,11 @@ class LoginController extends Controller
             return back()->with('mensaje', 'Datos incorrectos');
         }
 
-        if (auth()->user()->type == 0) {
+        if (auth()->user()->role == 'admin') {
             return redirect()->route('admin.index');
-        } else if (auth()->user()->type == 1){
+        } else if (auth()->user()->role == 'cliente') {
             return redirect()->route('cliente.index');
-        } else{
+        } else {
             return redirect()->route('empleado.index');
         }
     }

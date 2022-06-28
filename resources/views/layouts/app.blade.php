@@ -17,41 +17,41 @@
             @auth
                 <nav class="flex gap-8 items-baseline">
 
-                    @if (auth()->user()->type == 0) 
-                        <a class="font-bold text-gray-600 text-sm">
-                            Administrador:  
-                        </a>
+                    @can('usuario.index')
                         <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('usuario.index') }}">
                             Gestionar Usuarios
                         </a>
+                    @endcan
+
+                    @can('producto.index')
                         <a class="font-bold uppercase text-gray-600 text-sm" href="">
                             Gestionar Productos
                         </a>
-                        <a class="font-bold uppercase text-gray-600 text-sm" href="">
+                    @endcan
+
+                    @can('receta.index')
+                        <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('receta.index') }}">
                             Gestionar Recetas
                         </a>
+                    @endcan
 
-                    @elseif (auth()->user()->type == 1)
-                        <a class="font-bold  text-gray-600 text-sm">
-                            Bienvenido: 
+                    @can('ingrediente.index')
+                        <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('ingrediente.index') }}">
+                            Gestionar Ingredientes
                         </a>
+                    @endcan
+
+                    @can('pedido.create')
                         <a class="font-bold uppercase text-gray-600 text-sm" href="">
-                            Comprar Producto
+                            Comprar Productos
                         </a>
-                        <a class="font-bold uppercase text-gray-600 text-sm" href="">
-                            Perfil
-                        </a>
-                    @else
-                        <a class="font-bold  text-gray-600 text-sm">
-                            Bienvenido: 
-                        </a>
+                    @endcan
+
+                    @can('pedido.index')
                         <a class="font-bold uppercase text-gray-600 text-sm" href="">
                             Gestionar Pedidos
                         </a>
-                    <a class="font-bold uppercase text-gray-600 text-sm" href="">
-                            Perfil
-                    </a>
-                    @endif
+                    @endcan
 
                     <form action="{{ route('logout') }}" method="post">
                         @csrf
@@ -72,6 +72,7 @@
                     </a>
                 </nav>
             @endguest
+
         </div>
     </header>
 
@@ -87,7 +88,7 @@
     </main>
 
 
-    
+
     <footer class="mt-10 text-center p-5 text-gray-500 font-bold uppercase">
         MiCake - Todos los derechos reservados {{ now()->year }}
     </footer>

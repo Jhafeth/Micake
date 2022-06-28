@@ -25,17 +25,15 @@
                         </tr>
                     </thead>
                     @foreach ($administradores as $administrador)
-                        @if ($administrador->user->type == 0)
-                            <tr>
-                                <td>{{ $administrador->name }}</td>
-                                <td>{{ $administrador->email }}</td>
-                                <td>
-                                    <button class="bg-red-600 font-bold w-2/3 p-3 text-white rounded-lg" type="submit">
-                                        Eliminar
-                                    </button>
-                                </td>
-                            </tr>
-                        @endif
+                        <tr>
+                            <td>{{ $administrador->name }}</td>
+                            <td>{{ $administrador->email }}</td>
+                            <td>
+                                <button class="bg-red-600 font-bold w-2/3 p-3 text-white rounded-lg" type="submit">
+                                    Eliminar
+                                </button>
+                            </td>
+                        </tr>
                     @endforeach
                 </table>
             </div>
@@ -57,20 +55,18 @@
                         </tr>
                     </thead>
                     @foreach ($clientes as $cliente)
-                        @if ($cliente->user->type == 1)
-                            <tr>
-                                <td>{{ $cliente->ci }}</td>
-                                <td>{{ $cliente->user->name }}</td>
-                                <td>{{ $cliente->user->email }}</td>
-                                <td>{{ $cliente->telefono }}</td>
-                                <td>{{ $cliente->direccion }}</td>
-                                <td>
-                                    <button class="bg-red-600 font-bold w-2/3 p-3 text-white rounded-lg" type="submit">
-                                        Eliminar
-                                    </button>
-                                </td>
-                            </tr>
-                        @endif
+                        <tr>
+                            <td>{{ $cliente->persona->ci }}</td>
+                            <td>{{ $cliente->name }}</td>
+                            <td>{{ $cliente->email }}</td>
+                            <td>{{ $cliente->persona->telefono }}</td>
+                            <td>{{ $cliente->persona->direccion }}</td>
+                            <td>
+                                <button class="bg-red-600 font-bold w-2/3 p-3 text-white rounded-lg" type="submit">
+                                    Eliminar
+                                </button>
+                            </td>
+                        </tr>
                     @endforeach
                 </table>
             </div>
@@ -89,30 +85,29 @@
                             <th>Telefono</th>
                             <th>Direccion</th>
                             <th>
-                                
+
                             </th>
                         </tr>
                     </thead>
 
                     @foreach ($empleados as $empleado)
-                        @if ($empleado->user->type == 2)
-                            <tr>
-                                <td>{{ $empleado->ci }}</td>
-                                <td>{{ $empleado->user->name }}</td>
-                                <td>{{ $empleado->user->email }}</td>
-                                <td>{{ $empleado->telefono }}</td>
-                                <td>{{ $empleado->direccion }}</td>
-                                <td>
-                                    <button class="bg-red-600 font-bold w-2/3 p-3 text-white rounded-lg" type="submit">
-                                        Eliminar
-                                    </button>
-                                </td>
-                            </tr>
-                        @endif
+                        <tr>
+                            <td>{{ $empleado->persona->ci }}</td>
+                            <td>{{ $empleado->name }}</td>
+                            <td>{{ $empleado->email }}</td>
+                            <td>{{ $empleado->persona->telefono }}</td>
+                            <td>{{ $empleado->persona->direccion }}</td>
+                            <td>
+                                <button class="bg-red-600 font-bold w-2/3 p-3 text-white rounded-lg" type="submit">
+                                    Eliminar
+                                </button>
+                            </td>
+                        </tr>
                     @endforeach
                 </table>
             </div>
             <!--/Card-->
         </div>
         <!--/container-->
-    @endsection
+    </body>
+@endsection

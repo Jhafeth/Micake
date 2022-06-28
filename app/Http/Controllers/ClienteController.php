@@ -36,11 +36,9 @@ class ClienteController extends Controller
             [
                 'name' => $request->name,
                 'email' => $request->email,
-                'password' => Hash::make($request->password),
-                'type' => 1,
-                'active' => true
+                'password' => Hash::make($request->password)
             ]
-        );
+        )->assignRole('cliente');
 
         $persona = Persona::create(
             [

@@ -15,9 +15,18 @@ class UsuarioController extends Controller
     }
     public function index()
     {
-        $admins = User::all();
-        $personas = Persona::all();
-        return view('usuario.index', ['administradores'=> $admins,'clientes' => $personas, 'empleados' => $personas]);
+        $admins = User::role('admin')->get();
+        $clientes = User::role('cliente')->get();
+        $empleados = User::role('empleado')->get();
+
+        return view(
+            'usuario.index',
+            [
+                'administradores' => $admins,
+                'clientes' => $clientes,
+                'empleados' => $empleados
+            ]
+        );
     }
 
     public function create()

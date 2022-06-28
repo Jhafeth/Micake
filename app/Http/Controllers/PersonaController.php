@@ -15,11 +15,8 @@ class PersonaController extends Controller
 
     public function index()
     {
-        $p1 = Persona::where("user_id", "=", auth()->user()->id)
-            ->select("ci", "direccion", "telefono")
-            ->get();
 
-        return view('auth.update');
+        return view('admin.index');
     }
 
     public function store(Request $request)

@@ -5,5 +5,5 @@
 @endsection
 
 @section('contenido')
-    sexo
+    
 @endsection
