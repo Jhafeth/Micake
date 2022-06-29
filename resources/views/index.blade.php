@@ -5,5 +5,5 @@
 @endsection
 
 @section('contenido')
-    
+    Bienvenidos a la tienda virtual de MiCake
 @endsection

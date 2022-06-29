@@ -17,4 +17,8 @@ class Receta extends Model
     {
         return $this->belongsToMany('App\Models\Ingrediente')->withPivot('cantidad');
     }
+    public function productos()
+    {
+        return $this->belongsToMany('App\Models\Producto')->withPivot('cantidad');
+    }
 }

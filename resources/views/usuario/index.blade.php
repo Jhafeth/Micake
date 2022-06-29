@@ -5,9 +5,7 @@
 @endsection
 
 @section('contenido')
-
     <body class="bg-gray-100 text-gray-900 tracking-wider leading-normal">
-
         <!--Container-->
         <div class="container w-full md:w-4/5 xl:w-full  mx-auto px-2">
             <!--Card-->
@@ -84,9 +82,7 @@
                             <th>Email</th>
                             <th>Telefono</th>
                             <th>Direccion</th>
-                            <th>
-
-                            </th>
+                            <th></th>
                         </tr>
                     </thead>
 
