@@ -7,6 +7,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <title>MiCake - @yield('titulo')</title>
     <script src="{{ asset('js/app.js') }}" defer></script>
+     
 </head>
 
 <body class="bg-gray-100">
@@ -46,6 +47,12 @@
                             Comprar Productos
                         </a>
                     @endcan
+
+                    @can('medida.index')
+                    <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('medida.index') }}">
+                        Gestionar Medidas
+                    </a>
+                @endcan
 
                     @can('pedido.index')
                         <a class="font-bold uppercase text-gray-600 text-sm" href="">

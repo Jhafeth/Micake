@@ -35,11 +35,10 @@
                     <label for="medida" class="mb-2 block uppercase text-gray-500 font-bold">
                         Medidas
                     </label>
-                    <select name="medidas" id="medidas" class="select">
+                    <select name="medida" id="medida" class="select">
                         @foreach ($medidas as $medida)
                             <option value={{$medida->id}}>{{$medida->name}}</option>
                         @endforeach
-
                     </select>
                 </div>
 

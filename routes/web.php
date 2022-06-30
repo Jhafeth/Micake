@@ -42,19 +42,19 @@ Route::get('/usuario', [UsuarioController::class, 'index'])->name('usuario.index
 Route::get('/medida', [MedidaController::class, 'index'])->name('medida.index');
 Route::get('/medida/create', [MedidaController::class, 'create'])->name('medida.create');
 Route::post('/medida/create', [MedidaController::class, 'store']);
-Route::get('/medida/update', [MedidaController::class, 'update'])->name('medida.update');
-Route::post('/medida/update', [MedidaController::class, 'edit']);
+Route::get('/medida/{id}', [MedidaController::class, 'edit'])->name('medida.update');
+Route::post('/medida/update', [MedidaController::class, 'update']);
 
 Route::get('/ingrediente', [IngredienteController::class, 'index'])->name('ingrediente.index');
 Route::get('/ingrediente/create', [IngredienteController::class, 'create'])->name('ingrediente.create');
 Route::post('/ingrediente/create', [IngredienteController::class, 'store']);
-Route::get('/ingrediente/update', [IngredienteController::class, 'update'])->name('ingrediente.update');
-Route::post('/ingrediente/update', [IngredienteController::class, 'edit']);
+Route::get('/ingrediente/{id}', [IngredienteController::class, 'edit'])->name('ingrediente.update');
+Route::post('/ingrediente/update', [IngredienteController::class, 'update']);
 
 Route::get('/receta', [RecetaController::class, 'index'])->name('receta.index');
 Route::get('/receta/create', [RecetaController::class, 'create'])->name('receta.create');
 Route::post('/receta/create', [RecetaController::class, 'store']);
-Route::get('/receta/update', [RecetaController::class, 'update'])->name('receta.update');
-Route::post('/receta/update', [RecetaController::class, 'edit']);
+Route::get('/receta/update', [RecetaController::class, 'edit'])->name('receta.update');
+Route::post('/receta/update', [RecetaController::class, 'update']);
 
 Route::get('/producto', [ProductoController::class, 'index'])->name('producto.index');

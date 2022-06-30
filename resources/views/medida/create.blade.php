@@ -21,12 +21,6 @@
                     <input id="name" name="name" type="text" placeholder="Nombre"
                         class="border p-3 w-full rounded-lg @error('name') border-red-500 @enderror"
                         value="{{ old('name') }}" />
-
-                    @error('name')
-                        <p class="text-red-500 text-center">
-                            {{ $message }}
-                        </p>
-                    @enderror
                 </div>
 
                 <input type="submit" value="Crear Medida"
