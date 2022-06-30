@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('ingredientes', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->unsignedBigInteger('stock'); 
-            $table->unsignedBigInteger('medida_id'); 
+            $table->unsignedBigInteger('stock');
+            $table->unsignedBigInteger('medida_id');
             $table->foreign('medida_id')->references('id')->on('medidas');
             $table->timestamps();
         });

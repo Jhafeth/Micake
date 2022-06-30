@@ -24,7 +24,7 @@
                     @endcan
 
                     @can('producto.index')
-                        <a class="font-bold uppercase text-gray-600 text-sm" href="">
+                        <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('producto.index') }}">
                             Gestionar Productos
                         </a>
                     @endcan

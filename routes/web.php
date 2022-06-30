@@ -9,6 +9,7 @@ use App\Http\Controllers\RecetaController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\IngredienteController;
 
 
@@ -55,3 +56,5 @@ Route::get('/receta/create', [RecetaController::class, 'create'])->name('receta.
 Route::post('/receta/create', [RecetaController::class, 'store']);
 Route::get('/receta/update', [RecetaController::class, 'update'])->name('receta.update');
 Route::post('/receta/update', [RecetaController::class, 'edit']);
+
+Route::get('/producto', [ProductoController::class, 'index'])->name('producto.index');

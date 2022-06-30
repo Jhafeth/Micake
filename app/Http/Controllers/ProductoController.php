@@ -9,8 +9,7 @@ class ProductoController extends Controller
 {
     public function index()
     {
-        $productos = Producto::all();
-        return view('producto.index', ['recetas' => $productos]);
+        return view('producto.index');
     }
 
     public function create()

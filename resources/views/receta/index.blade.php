@@ -7,7 +7,7 @@
 @section('contenido')
 <div class="container w-full md:w-4/5 xl:w-full  mx-auto px-2">
     <h2 class="font-black text-center text-3xl mb-10">
-        Gestionar ingrediente
+        Gestionar recetas
     </h2>
     <div id='recipients' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white">
         <table id="example" class="stripe hover text-center"

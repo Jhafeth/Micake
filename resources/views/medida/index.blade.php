@@ -10,6 +10,13 @@
         Gestionar medidas
     </h2>
     <div id='recipients' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white">
+        <form action="{{ route('medida.create') }}" method="get">
+            <input type="submit" value="Crear Nueva Medida"
+                class="bg-orange-500 hover:bg-orange-700 transition-colors 
+                cursor-pointer uppercase font-bold w-full p-3 text-white rounded-lg" />
+        </form>
+    </div>
+    <div id='recipients' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white">
         <table id="example" class="stripe hover text-center"
             style="width:100%; padding-top: 1em;  padding-bottom: 1em;">
             <thead>
