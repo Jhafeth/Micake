@@ -10,7 +10,7 @@ Inicia sesion
             <img src="{{ asset('img/login.jpg') }}" alt="Imagen registro de usuarios">
         </div>
 
-        <div class="md:w-4/12 p-6 bg-white rounded-lg shadow-xl">
+        <div class="md:w-4/12 p-6 bg-PinkLavander rounded-lg shadow-xl">
             <form action="{{ route('login') }}" method="POST">
                 @csrf
 
