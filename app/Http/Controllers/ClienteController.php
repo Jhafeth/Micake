@@ -99,6 +99,7 @@ class ClienteController extends Controller
                     'telefono' => $request->telefono
                 ]
             );
+            
         auth()->attempt(
             [
                 'email' => $request->email,

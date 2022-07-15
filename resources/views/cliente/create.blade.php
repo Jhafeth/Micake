@@ -14,6 +14,7 @@
             
             <form action="{{ route('cliente.create') }}" method="POST">
                 @csrf
+
                 <div class="mb-5">
                     <label for="name" class="mb-2 block uppercase text-gray-500 font-bold">
                         Nombre
@@ -36,6 +37,7 @@
                     <input id="email" name="email" type="email" placeholder="Tu Email de registro"
                         class="border p-3 w-full rounded-lg @error('email') border-red-500 @enderror"
                         value="{{old('email')}}" />
+
                     @error('email')
                         <p class="text-red-500 text-center">
                             {{ $message }}
@@ -45,11 +47,13 @@
 
                 <div class="mb-5">
                     <label for="ci" class="mb-2 block uppercase text-gray-500 font-bold">
+
                         Carnet de Identidad
                     </label>
                     <input id="ci" name="ci" type="text" placeholder="Tu Carnet de Identidad"
-                        class="border p-3 w-full rounded-lg @error('email') border-red-500 @enderror"
+                        class="border p-3 w-full rounded-lg @error('ci') border-red-500 @enderror"
                         value="{{ old('ci') }}" />
+
                     @error('ci')
                         <p class="text-red-500 text-center">
                             {{ $message }}
@@ -59,6 +63,7 @@
 
                 <div class="mb-5">
                     <label for="telefono" class="mb-2 block uppercase text-gray-500 font-bold">
+
                         Telefono
                     </label>
                     <input id="telefono" name="telefono" type="text" placeholder="Tu telefono"
@@ -74,10 +79,11 @@
 
                 <div class="mb-5">
                     <label for="direccion" class="mb-2 block uppercase text-gray-500 font-bold">
+
                         Direccion
                     </label>
                     <input id="direccion" name="direccion" type="text" placeholder="Tu direccion"
-                        class="border p-3 w-full rounded-lg @error('name') border-red-500 @enderror"
+                        class="border p-3 w-full rounded-lg @error('direccion') border-red-500 @enderror"
                         value="{{ old('direccion') }}" />
 
                     @error('direccion')
@@ -89,6 +95,7 @@
 
                 <div class="mb-5">
                     <label for="password" class="mb-2 block uppercase text-gray-500 font-bold">
+
                         Password
                     </label>
                     <input 
@@ -107,6 +114,7 @@
 
                 <div class="mb-5">
                     <label for="password_confirmation" class="mb-2 block uppercase text-gray-500 font-bold">
+                        
                         Repetir Password
                     </label>
                     <input 

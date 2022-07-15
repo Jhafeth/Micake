@@ -1,7 +1,7 @@
 module.exports = {
   content: [
     "./resources/**/*.blade.php",
-    "./resources/**/*.js"
+    "./resources/**/*.js",
   ],
 
   theme: {
@@ -13,11 +13,19 @@ module.exports = {
       'Rosa': '#FFAFCC',
       'AzulUrano': '#BDE0FE',
       'BabyBlue': '#A2D2FF',
-      'AureolinYellow': '#FFEE32',
-      
+      "AureolinYellow": '#FFEE32',
     }, 
-    extend: {},
+    extend: {
+
+    },
   },
 
-  plugins: [],
+  corePlugins:{
+    aspectRatio: true,
+  },
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+  ],
 }

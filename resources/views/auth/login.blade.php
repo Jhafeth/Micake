@@ -1,16 +1,16 @@
 @extends('layouts.app')
 
 @section('titulo')
-Inicia sesion  
+Inicia sesion en MiCake
 @endsection
 
 @section('contenido')
     <div class="md:flex md:justify-center md:gap-10 md:items-center">
         <div class="md:w-4/12 p-5">
-            <img src="{{ asset('img/login.jpg') }}" alt="Imagen registro de usuarios">
+            <img src="{{ asset('img/Login.jpg') }}" alt="Imagen registro de usuarios">
         </div>
 
-        <div class="md:w-4/12 p-6 bg-PinkLavander rounded-lg shadow-xl">
+        <div class="md:w-4/12 p-6 bg-with rounded-lg shadow-xl">
             <form action="{{ route('login') }}" method="POST">
                 @csrf
 
