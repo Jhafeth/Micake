@@ -15,22 +15,23 @@ class MedidaController extends Controller
 
     public function create()
     {
-        //
+        return view('medida.create');
     }
 
     public function store(Request $request)
     {
-        //
+        Medida::create(['name' => $request->name]);
     }
 
-    public function show(Medida $medida)
+    public function show($id)
     {
-        //
+        return $id;
     }
 
-    public function edit(Medida $medida)
+    public function edit($id)
     {
-        //
+        $medida = Medida::find($id) ;
+        return view('medida.update',['medida'=>$medida]) ;
     }
 
     public function update(Request $request, Medida $medida)

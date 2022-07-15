@@ -5,15 +5,16 @@
 @endsection
 
 @section('contenido')
+<<<<<<< HEAD
 
-<div class="card" style="width: 18rem;">
+{{-- <div class="card" style="width: 18rem;">
   <img src="{{ asset('img/torta_meme1.jpg') }}" class="card-img-top" alt="Torta meme">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
-</div>
+</div> --}}
 
 {{-- <div class="bg-yellow-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,4 +65,25 @@
     </div>
   </div> --}}
   
+=======
+    <div class="flex justify-center">
+        <div class="w-full md:w-8/12 lg:w-6/12 md:flex">
+            <div class="md:w-8/12 lg:w-6/12 px-5">
+                <p class="text-gray-700 text-2xl">
+                    Cliente: {{ auth()->user()->name }}
+                </p>
+                <p class="text-gray-700 text-2xl">
+                    Correo Electronico: {{ auth()->user()->email }}
+                </p>
+            </div>
+            <div class="md:w-8/12 lg:w-6/12 px-5">
+                <form action="{{ route('cliente.update') }}" method="get">
+                    <input type="submit" value="Modificar Datos"
+                        class="bg-sky-600 hover:bg-sky-700 transition-colors 
+                        cursor-pointer uppercase font-bold w-full p-3 text-white rounded-lg" />
+                </form>
+            </div>
+        </div>
+    </div>
+>>>>>>> 139ec7e1bc25901b735cafce957bd141644243ef
 @endsection

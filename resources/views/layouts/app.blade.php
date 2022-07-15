@@ -7,10 +7,14 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <title>MiCake - @yield('titulo')</title>
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <!-- CSS only -->
+<<<<<<< HEAD
+    {{-- <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> --}}
+=======
+     
+>>>>>>> 139ec7e1bc25901b735cafce957bd141644243ef
 </head>
 
 <body class="bg-PinkLavander">
@@ -28,7 +32,7 @@
                     @endcan
 
                     @can('producto.index')
-                        <a class="font-bold uppercase text-gray-600 text-sm" href="">
+                        <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('producto.index') }}">
                             Gestionar Productos
                         </a>
                     @endcan
@@ -50,6 +54,12 @@
                             Comprar Productos
                         </a>
                     @endcan
+
+                    @can('medida.index')
+                    <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('medida.index') }}">
+                        Gestionar Medidas
+                    </a>
+                @endcan
 
                     @can('pedido.index')
                         <a class="font-bold uppercase text-gray-600 text-sm" href="">

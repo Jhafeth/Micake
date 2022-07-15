@@ -56,9 +56,9 @@ class EmpleadoController extends Controller
         //
     }
 
-    public function edit($id)
+    public function edit()
     {
-        //
+        return view('empleado.update');
     }
 
     public function update(Request $request, $id)
