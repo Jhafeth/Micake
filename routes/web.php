@@ -11,7 +11,7 @@ use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\IngredienteController;
-
+use App\Http\Controllers\CategoriaController;
 
 Route::get('/', function () {return view('index');})->name('home');
 
@@ -58,3 +58,16 @@ Route::get('/receta/update', [RecetaController::class, 'edit'])->name('receta.up
 Route::post('/receta/update', [RecetaController::class, 'update']);
 
 Route::get('/producto', [ProductoController::class, 'index'])->name('producto.index');
+Route::get('/producto/create', [ProductoController::class, 'create'])->name('producto.create');
+Route::post('/producto/create', [ProductoController::class, 'store']);
+Route::get('/producto/update', [ProductoController::class, 'edit'])->name('producto.update');
+Route::post('/producto/update', [ProductoController::class, 'update']);
+Route::delete('/producto/{id}', [ProductoController::class, 'destroy'])->name('producto.delete');
+
+
+Route::get('/categoria', [CategoriaController::class, 'index'])->name('categoria.index');
+Route::get('/categoria/create', [CategoriaController::class, 'create'])->name('categoria.create');
+Route::post('/categoria/create', [CategoriaController::class, 'store']);
+Route::get('/categoria/update', [CategoriaController::class, 'edit'])->name('categoria.update');
+Route::post('/categoria/update', [CategoriaController::class, 'update']);
+Route::delete('/categoria/{id}', [CategoriaController::class, 'destroy'])->name('categoria.delete');

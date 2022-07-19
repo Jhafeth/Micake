@@ -7,14 +7,12 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <title>MiCake - @yield('titulo')</title>
     <script src="{{ asset('js/app.js') }}" defer></script>
-<<<<<<< HEAD
-    {{-- <!-- CSS only -->
+
+     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> --}}
-=======
-     
->>>>>>> 139ec7e1bc25901b735cafce957bd141644243ef
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
 </head>
 
 <body class="bg-PinkLavander">
@@ -84,6 +82,28 @@
                     <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('cliente.create') }}">
                         Crear Cuenta
                     </a>
+                    
+                    <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('medida.index') }}">
+                        Medidas
+                    </a>
+                    <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('ingrediente.index') }}">
+                        Ingredientes
+                    </a>
+                    <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('receta.index') }}">
+                        Recetas
+                    </a>
+                    <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('producto.index') }}">
+                        Productos
+                    </a>
+                    
+                    <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('producto.index') }}">
+                        Categoria
+                    </a>
+                    
+                    <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('producto.index') }}">
+                        Bitacora
+                    </a>
+                    
                 </nav>
             @endguest
 
